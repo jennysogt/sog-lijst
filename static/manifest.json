@@ -1,0 +1,14 @@
+{
+  "name": "Sog lijst",
+  "short_name": "Sog lijst",
+  "description": "De ultieme sog lijst",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#12151c",
+  "theme_color": "#3b6cf6",
+  "icons": [
+    { "src": "/static/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/static/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
