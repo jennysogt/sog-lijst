@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ data.title }}</title>
+  <style>
+    :root {
+      --bg: #f6f7f9;
+      --card: #ffffff;
+      --text: #1d2330;
+      --muted: #5b6577;
+      --accent: #3b6cf6;
+      --border: #e2e5ec;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #12151c;
+        --card: #1b2029;
+        --text: #e8ebf2;
+        --muted: #9aa4b8;
+        --accent: #7c9cff;
+        --border: #2a303c;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem 1rem 4rem;
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+    }
+    main { max-width: 720px; margin: 0 auto; }
+    h1 { text-align: center; font-size: 2.2rem; margin-bottom: 2rem; }
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      margin: -1rem 0 2rem;
+      white-space: pre-line;
+    }
+    section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.2rem 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+    h2 { margin: 0 0 .8rem; font-size: 1.2rem; }
+    .link { padding: .6rem 0; border-top: 1px solid var(--border); }
+    .link:first-of-type { border-top: none; }
+    .link a {
+      color: var(--accent);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .link a:hover { text-decoration: underline; }
+    .beschrijving {
+      margin: .25rem 0 0;
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .link { position: relative; padding-right: 2.4rem; }
+
+    .klaar-knop {
+      position: absolute;
+      right: 0;
+      top: .7rem;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      border: 2px solid var(--muted);
+      background: none;
+      color: transparent;
+      font-size: .85rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+    }
+    .klaar-knop:hover { border-color: #22a559; }
+
+    .link.klaar .klaar-knop {
+      background: #22a559;
+      border-color: #22a559;
+      color: #fff;
+    }
+    .link.klaar a,
+    .link.klaar .beschrijving { opacity: .5; }
+    .ster-knop {
+      width: 1.3rem;
+      height: 1.3rem;
+      padding: 0;
+      margin-right: .4rem;
+      border: none;
+      cursor: pointer;
+      vertical-align: middle;
+      background: var(--muted);
+      -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+              mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' fill='none' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E") center / contain no-repeat;
+      transition: transform .15s, background .15s;
+    }
+    .ster-knop:hover { transform: scale(1.15); background: #f5b301; }
+    .link.fav .ster-knop {
+      background: #f5b301;
+      -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' fill='black' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E");
+              mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z' fill='black' stroke='black' stroke-width='1.8' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>{{ data.title }}</h1>
+    {% if data.subtitle%}
+    <p class="subtitle">{{ data.subtitle }}</p>
+    {% endif %}
+    {% for cat in data.categories %}
+    <section>
+      <h2>{{ cat.name }}</h2>
+      {% for link in cat.links %}
+      <div class="link" data-id="{{ link.url }}" data-index="{{ loop.index }}">
+        <button class="ster-knop" type="button" aria-label="Favoriet"></button>
+        <a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.name }} →</a>
+        <button class="klaar-knop" type="button" aria-label="Vandaag gedaan">✓</button>
+        {% if link.description %}
+        <p class="beschrijving">{{ link.description}}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </section>
+    {% endfor %}
+  </main>
+<script>
+  const SLEUTEL = "favorieten";
+
+  function laad() {
+    try { return JSON.parse(localStorage.getItem(SLEUTEL)) || []; }
+    catch (e) { return []; }
+  }
+
+  function bewaar(lijst) {
+    try { localStorage.setItem(SLEUTEL, JSON.stringify(lijst)); }
+    catch (e) {}
+  }
+
+  function toon() {
+    const favs = laad();
+    document.querySelectorAll("section").forEach(sectie => {
+      const links = Array.from(sectie.querySelectorAll(".link"));
+      links.forEach(l => {
+        const isFav = favs.includes(l.dataset.id);
+        l.classList.toggle("fav", isFav);
+      });
+      links.sort((a, b) => {
+        const fa = a.classList.contains("fav") ? 0 : 1;
+        const fb = b.classList.contains("fav") ? 0 : 1;
+        return fa - fb || a.dataset.index - b.dataset.index;
+      });
+      links.forEach(l => sectie.appendChild(l));
+    });
+  }
+
+  document.addEventListener("click", e => {
+    const knop = e.target.closest(".ster-knop");
+    if (!knop) return;
+    const id = knop.closest(".link").dataset.id;
+    let favs = laad();
+    favs = favs.includes(id) ? favs.filter(x => x !== id) : [...favs, id];
+    bewaar(favs);
+    toon();
+  });
+
+  toon();
+</script>
+<script>
+  const KLAAR_SLEUTEL = "gedaan";
+
+  function vandaag() {
+    const d = new Date();
+    return d.getFullYear() + "-" +
+      String(d.getMonth() + 1).padStart(2, "0") + "-" +
+      String(d.getDate()).padStart(2, "0");
+  }
+
+  function laadKlaar() {
+    try { return JSON.parse(localStorage.getItem(KLAAR_SLEUTEL)) || {}; }
+    catch (e) { return {}; }
+  }
+
+  function bewaarKlaar(data) {
+    try { localStorage.setItem(KLAAR_SLEUTEL, JSON.stringify(data)); }
+    catch (e) {}
+  }
+
+  function toonKlaar() {
+    const data = laadKlaar();
+    const dag = vandaag();
+    document.querySelectorAll(".link").forEach(l => {
+      l.classList.toggle("klaar", data[l.dataset.id] === dag);
+    });
+  }
+
+function zetKlaar(id, aan) {
+  const dag = vandaag();
+  const data = laadKlaar();
+
+  // oude dagen opruimen
+  Object.keys(data).forEach(k => { if (data[k] !== dag) delete data[k]; });
+
+  if (aan) data[id] = dag;
+  else delete data[id];
+
+  bewaarKlaar(data);
+  toonKlaar();
+}
+
+document.addEventListener("click", e => {
+  // handmatig aan/uit via het rondje
+  const knop = e.target.closest(".klaar-knop");
+  if (knop) {
+    const blok = knop.closest(".link");
+    zetKlaar(blok.dataset.id, !blok.classList.contains("klaar"));
+    return;
+  }
+
+  // automatisch aan bij klikken op de link
+  const link = e.target.closest(".link a");
+  if (link) zetKlaar(link.closest(".link").dataset.id, true);
+});
+
+// ook bij een klik met het scrollwieltje (opent in nieuw tabblad)
+document.addEventListener("auxclick", e => {
+  if (e.button !== 1) return;
+  const link = e.target.closest(".link a");
+  if (link) zetKlaar(link.closest(".link").dataset.id, true);
+});
+
+toonKlaar();
+</script>
+</body>
+</html>

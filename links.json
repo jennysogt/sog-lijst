@@ -1,0 +1,171 @@
+{
+  "title": "De ultieme sog lijst",
+  "subtitle": "Lieve studentjes, \nEr mag natuurlijk niet te hard gestudeerd worden dus hierbij een mooie lijst waarmee je lekker kan soggen, geniet ervan! \nLiefs Jenny",
+  "categories": [
+    {
+      "name": "Muziek",
+      "links": [
+        {
+          "name": "Bandle",
+          "url": "https://bandle.app/daily",
+          "description": "Lied raden, steeds komt er een instrument bij"
+        },
+        {
+          "name": "Songless",
+          "url": "https://lessgames.com/songless",
+          "description": "Lied raden, steeds langer fragment van het lied (3 categoriën)"
+        },
+        {
+          "name": "Heardle",
+          "url": "https://www.heardle.info/",
+          "description": "Lied raden, steeds langer fragment van het lied"
+        },
+        {
+          "name": "Spotle",
+          "url": "https://spotle.io/",
+          "description": "Artiest raden"
+        },
+        {
+          "name": "Artistle",
+          "url": "https://artistle.io/play",
+          "description": "Artiest raden"
+        },
+        {
+          "name": "Harmonies",
+          "url": "https://harmonies.io/",
+          "description": "Connections maar dan muziek"
+        },
+        {
+          "name": "Crosstune",
+          "url": "https://crosstune.io/",
+          "description": "Crossword met muziek"
+        },
+        {
+          "name": "Lyricle",
+          "url": "https://www.lyricle.app/",
+          "description": "Lied raden op basis van lyrics"
+        },
+        {
+          "name": "Lyrdle",
+          "url": "https://www.lyrdle.com/",
+          "description": "Lied raden op basis van lyrics"
+        }
+      ]
+    },
+    {
+      "name": "Films",
+      "links": [
+        {
+          "name": "Spotle movie",
+          "url": "https://spotle.movie/",
+          "description": "Film raden"
+        },
+        {
+          "name": "Moviedle",
+          "url": "https://moviedle.xyz/",
+          "description": "Film raden op basis van de actrices/acteurs"
+        },
+        {
+          "name": "Moviedle classic",
+          "url": "https://moviedle.xyz/classic/",
+          "description": "Klassieke film raden op basis van de actrices/acteurs"
+        },
+        {
+          "name": "Actorle",
+          "url": "https://actorle.com/",
+          "description": "Actrice/acteur raden op basis van films"
+        },
+        {
+          "name": "Actorle TV",
+          "url": "https://actorle.tv/",
+          "description": "Actrice/acteur raden op basis van series"
+        },
+        {
+          "name": "Filmlink",
+          "url": "https://www.filmlink.io/daily",
+          "description": "Vind de link van film A naar film B via actrices/acteurs en andere films"
+        }
+      ]
+    },
+    {
+      "name": "Geografie",
+      "links": [
+        {
+          "name": "Globle",
+          "url": "https://globle-game.com/",
+          "description": "Land raden, warm koud"
+        },
+        {
+          "name": "Flagle",
+          "url": "https://www.flagle.io/",
+          "description": "Vlag raden van land"
+        },
+        {
+          "name": "Worldle",
+          "url": "https://worldle.teuteuf.fr/",
+          "description": "Land raden op basis van vorm"
+        },
+        {
+          "name": "Tradle",
+          "url": "https://oec.world/en/games/tradle",
+          "description": "Land raden op basis van waar ze in handelen"
+        },
+        {
+          "name": "Worldguessr",
+          "url": "https://www.worldguessr.com/",
+          "description": "Locatie raden op basis van pin in google maps, Geoguessr maar dan gratis"
+        },
+        {
+          "name": "Timeguessr",
+          "url": "https://www.timeguessr.com/",
+          "description": "Locatie en jaartal raden op basis van foto"
+        }
+      ]
+    },
+    {
+      "name": "Trivia / Random",
+      "links": [
+        {
+          "name": "Krillion",
+          "url": "https://krillion.io/",
+          "description": "Zo niche mogelijk antwoord geven"
+        },
+        {
+          "name": "Size it up",
+          "url": "https://magnitudle.com/size-it-up",
+          "description": "Hoe groot zijn dingen op basis van andere dingen"
+        },
+        {
+          "name": "Clueless",
+          "url": "https://lessgames.com/clueless",
+          "description": "Raad het woord van de dag"
+        },
+        {
+          "name": "Semantle",
+          "url": "https://semantle.com/",
+          "description": "Raad het woord van de dag"
+        },
+        {
+          "name": "Contexto",
+          "url": "https://contexto.me/en/daily",
+          "description": "Raad het woord van de dag"
+        },
+        {
+          "name": "More/less",
+          "url": "https://lessgames.com/moreless",
+          "description": "Hoger of lager, verschillende categoriën"
+        },
+        {
+          "name": "Higher or lower",
+          "url": "https://www.higherlowergame.com/",
+          "description": "Hoger of lager, verschillende categoriën"
+        },
+        {
+          "name": "Dialed",
+          "url": "https://dialed.gg/",
+          "description": "Geheugen testen: kleuren geluiden tonen"
+        }
+      ]
+    }
+  ]
+}
