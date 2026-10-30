@@ -41,6 +41,11 @@
           "description": "Crossword met muziek"
         },
         {
+          "name": "Unshuffle",
+          "url": "https://spotle.io/unshuffle",
+          "description": "Muziek snippets in goede volgorde zetten"
+        },
+        {
           "name": "Lyricle",
           "url": "https://www.lyricle.app/",
           "description": "Lied raden op basis van lyrics"
