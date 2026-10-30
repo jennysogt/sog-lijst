@@ -119,7 +119,7 @@
           "name": "Timeguessr",
           "url": "https://www.timeguessr.com/",
           "description": "Locatie en jaartal raden op basis van foto"
-        },
+        }
         
       ]
     },
@@ -145,7 +145,7 @@
           "name": "Nerdle",
           "url": "https://nerdlegame.com/?st=5",
           "description": "Vergelijking raden"
-        },
+        }
       ]
     }
   ]
