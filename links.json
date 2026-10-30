@@ -119,56 +119,32 @@
           "name": "Timeguessr",
           "url": "https://www.timeguessr.com/",
           "description": "Locatie en jaartal raden op basis van foto"
-        }
+        },
+        
       ]
     },
     {
-      "name": "Trivia / Random",
+      "name": "Woorden",
       "links": [
         {
-          "name": "Krillion",
-          "url": "https://krillion.io/",
-          "description": "Zo niche mogelijk antwoord geven"
+          "name": "Wordle",
+          "url": "https://www.nytimes.com/games/wordle/index.html",
+          "description": "Woord raden"
         },
         {
-          "name": "Noillirk",
-          "url": "https://noillirk.com/",
-          "description": "Zo basic mogelijk antwoord geven"
+          "name": "Connections",
+          "url": "https://www.nytimes.com/games/connections?utm_source=wordle&utm_medium=referral&utm_campaign=wordle_nav",
+          "description": "Categorie raden"
         },
         {
-          "name": "Size it up",
-          "url": "https://magnitudle.com/size-it-up",
-          "description": "Hoe groot zijn dingen op basis van andere dingen"
+          "name": "Secedordle",
+          "url": "https://sedecordle.com/?mode=daily",
+          "description": "Meerdere woorden tegelijk raden, wordle style"
         },
         {
-          "name": "Clueless",
-          "url": "https://lessgames.com/clueless",
-          "description": "Raad het woord van de dag"
-        },
-        {
-          "name": "Semantle",
-          "url": "https://semantle.com/",
-          "description": "Raad het woord van de dag"
-        },
-        {
-          "name": "Contexto",
-          "url": "https://contexto.me/en/daily",
-          "description": "Raad het woord van de dag"
-        },
-        {
-          "name": "More/less",
-          "url": "https://lessgames.com/moreless",
-          "description": "Hoger of lager, verschillende categoriën"
-        },
-        {
-          "name": "Higher or lower",
-          "url": "https://www.higherlowergame.com/",
-          "description": "Hoger of lager, verschillende categoriën"
-        },
-        {
-          "name": "Dialed",
-          "url": "https://dialed.gg/",
-          "description": "Geheugen testen: kleuren geluiden tonen"
+          "name": "Nerdle",
+          "url": "https://nerdlegame.com/?st=5",
+          "description": "Vergelijking raden"
         }
       ]
     }
